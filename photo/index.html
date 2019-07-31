@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>Hexo+GitHub | DBin的个人博客</title>
-  <meta name="keywords" content=" Hexo+GitHub ">
-  <meta name="description" content="Hexo+GitHub | DBin的个人博客">
+  <title>photo | DBin的个人博客</title>
+  <meta name="keywords" content>
+  <meta name="description" content="photo | DBin的个人博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="about">
@@ -278,25 +278,19 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-Hexo+Github" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Hexo+GitHub</h1>
+        <h1 class="article-title">photo</h1>
     
     <div class="article-meta">
         
         
         
-        
-        <span class="tag">
-            
-            <a href="javascript:" class="color2">Hexo+GitHub</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-08-01 02:09:40'>2019-07-31 22:50</time>
+        创建时间:<time class="date" title='更新时间: 2019-08-01 02:12:53'>2019-08-01 02:12</time>
         
     </div>
     <div class="article-meta">
@@ -329,7 +323,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#你的头像url"><span class="toc-text">你的头像url</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#true-启用全文搜索"><span class="toc-text">true 启用全文搜索</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开启此功能需要下面操作："><span class="toc-text">开启此功能需要下面操作：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-在-hexo-根目录-执行-npm-install-hexo-generator-search-–save-安装插件"><span class="toc-text">1. 在 hexo 根目录 执行 npm install hexo-generator-search –save 安装插件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-在-hexo-根目录的-config-xml-中添加下面内容"><span class="toc-text">2. 在 hexo 根目录的 _config.xml 中添加下面内容</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#search"><span class="toc-text">search:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#path-search-xml"><span class="toc-text">path: search.xml</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#field-post"><span class="toc-text">field: post</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#tags-标签，通过-来筛选"><span class="toc-text">tags:标签，通过#来筛选</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tags"><span class="toc-text">tags:</span></a></li></ol></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -344,37 +338,7 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>安装node + git ==》Hexo</p>
-<p>创建库 花时间<br><code>hexo init smallyan.github.io</code></p>
-<p>##打开库文件位置<br><code>cd smallyan.github.io</code></p>
-<p>#安装一些依赖（不写）安装之前，npm install 会先检查，node_modules 目录之中是否已经存在指定模块。如果存在，就不再重新安装了，即使远程仓库已经有了一个新版本，也是如此。<br>npm install 也支持直接输入 Github 代码库地址<br>npm install</p>
-<p>##运行本地 Hexo 服务<br><code>hexo server或者hexo s</code></p>
-<p>生成SSH keys==&gt;<br><code>ssh-keygen -t rsa -C &quot;tenggeli999@163.com&quot;</code></p>
-<p>##已经可以通过 SSH 链接到 GitHub 了，还有一些个人信息需要完善的。<br>git config –global user.name “dbin1573”<br>git config –global user.email “<a href="mailto:tenggeli999@163.com" target="_blank" rel="noopener">tenggeli999@163.com</a>“</p>
-<p>##配置根目录下的_config.yml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git </span><br><span class="line">repo: git@github.com:dbin1573/smallyan.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
-
-<p>本地文件提交到 GitHub Pages// 删除旧的 public 文件hexo clean// 生成新的 public 文件hexo generate或者hexo g// 开始部署hexo deploye或者hexo d</p>
-<p>#部署 及部署错误<br><code>$ hexo d</code><br>ERROR Deployer not found: git<br><code>npm install --save hexo-deployer-git</code></p>
-<p>#下载的3-hexo主题 后打开文件位置<br><em>使用git 的clone github的地址 _ 到新的地址</em><br><code>$ git clone https://github.com/yelog/hexo-theme-3-hexo.git themes/3-hexo</code><br><code>$ cd themes/3-hexo/</code></p>
-<h1 id="你的头像url"><a href="#你的头像url" class="headerlink" title="你的头像url"></a>你的头像url</h1><ol>
-<li>替换 source/img/avatar.jpg 图片。</li>
-<li>修改 _config.yml 中头像的配置记录<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">avatar: /img/avatar.jpg</span><br><span class="line">favicon: /img/avatar.jpg</span><br><span class="line"></span><br><span class="line">git pull 	//在修改完资源后使用</span><br><span class="line">hexo d -g	//-g编译 d部署</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>#关于页面<br>在 hexo 根目录执行以下，创建 关于 页面<br><code>hexo new page &quot;about&quot;</code></p>
-<p>*部署并初始化<br>*1.发布 hexo<br><code>$`` hexo clear &amp;&amp; hexo g &amp;&amp; hexo d</code></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> 从远程服务器克隆一个一模一样的版本库到本地,复制的是整个版本库，叫做clone.（clone是将一个库复制到你的本地，是一个本地从无到有的过程）</span><br><span class="line">从远程服务器获取到一个branch分支的更新到本地，并更新本地库，叫做pull.（pull是指同步一个在你本地有版本的库内容更新的部分到你的本地库）</span><br></pre></td></tr></table></figure>
-
-<p>searchAll: true</p>
-<h1 id="true-启用全文搜索"><a href="#true-启用全文搜索" class="headerlink" title="true 启用全文搜索"></a>true 启用全文搜索</h1><h1 id="开启此功能需要下面操作："><a href="#开启此功能需要下面操作：" class="headerlink" title="开启此功能需要下面操作："></a>开启此功能需要下面操作：</h1><h1 id="1-在-hexo-根目录-执行-npm-install-hexo-generator-search-–save-安装插件"><a href="#1-在-hexo-根目录-执行-npm-install-hexo-generator-search-–save-安装插件" class="headerlink" title="1. 在 hexo 根目录 执行 npm install hexo-generator-search –save 安装插件"></a>1. 在 hexo 根目录 执行 npm install hexo-generator-search –save 安装插件</h1><h1 id="2-在-hexo-根目录的-config-xml-中添加下面内容"><a href="#2-在-hexo-根目录的-config-xml-中添加下面内容" class="headerlink" title="2. 在 hexo 根目录的 _config.xml 中添加下面内容"></a>2. 在 hexo 根目录的 _config.xml 中添加下面内容</h1><h1 id="search"><a href="#search" class="headerlink" title="search:"></a>search:</h1><h1 id="path-search-xml"><a href="#path-search-xml" class="headerlink" title="path: search.xml"></a>path: search.xml</h1><h1 id="field-post"><a href="#field-post" class="headerlink" title="field: post"></a>field: post</h1><p> categories:文集，为左侧列表</p>
-<h2 id="tags-标签，通过-来筛选"><a href="#tags-标签，通过-来筛选" class="headerlink" title="tags:标签，通过#来筛选"></a>tags:标签，通过#来筛选</h2><p>title: Hexo+GitHub<br>date: 1564584611000<br>categories:</p>
-<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p>##快捷命令<br>其实就通过alias，触发一些命令的集合<br>在 ~/.bashrc 文件中添加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alias hs=&apos;hexo clean &amp;&amp; hexo g &amp;&amp; hexo s&apos;  #启动本地服务</span><br><span class="line">alias hd=&apos;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d&apos;  #部署博客</span><br></pre></td></tr></table></figure>
-
-<p>标题：#后跟一个空格表示一级标题，<br>二级标题就是两个#，依次类推<br>分割线：连续三个以上-<br>图片：<img src="%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80" alt="图片alt" title="图片title"><br>超链接：<a href="超链接地址" title="超链接title">超链接名</a><br>列表：数字加点加空格<br>单行代码：反引号包围代码内容，如<code>System.currentTimeMillis()</code><br>代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行<br>字体加粗：要加粗的文字左右分别用两个*号包起来</p>
-
+        
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 tenggeli999@163.com </span>
     </div>
@@ -386,18 +350,6 @@
 </p>
 
 
-<div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Hexo+GitHub</p>
-    
-    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="DBin">DBin</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-07-31, 22:50:11</p>
-    <p><span class="copy-title">最后更新:</span>2019-08-01, 02:09:40</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/31/Hexo+Github/" title="Hexo+GitHub">http://dbin.xyz/2019/07/31/Hexo+Github/</a>
-    <p>
-        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-    </p>
-</div>
-
 
 
     <div id="comments"></div>
@@ -405,7 +357,7 @@
 <script src="/js/gitment.js"></script>
 <script>
     var gitment = new Gitment({
-        id: 'http://dbin.xyz/2019/07/31/Hexo+Github/', // 可选。默认为 location.href
+        id: 'http://dbin.xyz/photo/index.html', // 可选。默认为 location.href
         owner: 'dbin1573',
         repo: 'dbin1573.github.io',
         oauth: {
