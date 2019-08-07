@@ -4,7 +4,82 @@
   
     
     <entry>
-      <title>Hexo+GitHub</title>
+      <title>AspectJ补充副</title>
+      <link href="/2019/08/07/AspectJ%E8%A1%A5%E5%85%85%20-%20%E5%89%AF%E6%9C%AC/"/>
+      <url>/2019/08/07/AspectJ%E8%A1%A5%E5%85%85%20-%20%E5%89%AF%E6%9C%AC/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 文集 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AspectJ补充 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AspectJ补充</title>
+      <link href="/2019/08/07/AspectJ%E8%A1%A5%E5%85%85/"/>
+      <url>/2019/08/07/AspectJ%E8%A1%A5%E5%85%85/</url>
+      
+        <content type="html"><![CDATA[<p>#AspectJ补充的面向切面<br>***** 1<br>class Log implements MethodBeforeAdvice,AfterReturningAdvice<br>xml:<a href="aop:config" target="_blank" rel="noopener">aop:config</a><br>        &lt;aop:pointcut id=”mpp” expression=”execution(“”)”/&gt;<br>        &lt;aop:advisor  pointcut-ref=”daopointcut” advice-ref=”log1(切面Bean)”/&gt;//顾问<br>    &lt;/&gt;<br>实现前置与后置通知 此时就直接调用公共方法Log<br>                                            xml.1 <a href="aop:config" target="_blank" rel="noopener">aop:config</a>&lt;aop:aspectJ …ref=切面&gt;&lt;aop:pointcut 签名点&gt;<br>_____ 2<br>注解方式:先开启组件扫描&lt;Context:component-scan base-package=’’/&gt;<br>@Aspect   日志切面<br>public Class Log </p><pre><code>切点@Pointcut(&quot;表达式&quot;)  ==&gt;&quot;execution(* *(..))&quot;public void doPointCut(){}//相当于定义切点的id@Before（“doPointCut()”）public void beforeDao（）{sout（“我是前置通知”）}@Around...省略了 重用切入点前    jointPoint.proceed..环绕. 后</code></pre><p>xml：<a href="aop:aspectJ-autoproxy/" target="_blank" rel="noopener">aop:aspectJ-autoproxy/</a>自动代理aspectJ</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 文集 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AspectJ补充 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MyBaties无configuration版</title>
+      <link href="/2019/08/07/MyBaties%E6%97%A0configuration%E7%89%88/"/>
+      <url>/2019/08/07/MyBaties%E6%97%A0configuration%E7%89%88/</url>
+      
+        <content type="html"><![CDATA[<p>##MyBaties无configuration版<br>configuration的xml标签都是可以解析成对象的</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">DataSource datasource=new      PooledDataSource(&quot;oracle.jdbc.driver.OracleDriver&quot;,&quot;jdbc:oracle:thin:@localhost:1521:orcl&quot;,&quot;c##scott&quot;,&quot;tiger&quot;);</span><br><span class="line">TransactionFactory transactionFactory=new JdbcTransactionFactory();</span><br><span class="line">Environment environment=new Environment(&quot;oracle&quot;, transactionFactory, datasource);</span><br><span class="line">Configuration configuration=new Configuration(environment);</span><br><span class="line"></span><br><span class="line">configuration.addMapper(IEmpMapper.class);</span><br><span class="line">SqlSessionFactory sf=new SqlSessionFactoryBuilder().build(configuration);</span><br><span class="line">SqlSession ss=sf.openSession();</span><br><span class="line">IEmpMapper iemp= ss.getMapper(IEmpMapper.class);</span><br><span class="line">iemp.insert(new Emp(1002, &quot;松江&quot;));</span><br><span class="line">ss.commit();</span><br><span class="line">ss.close();</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 文集 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hello-world </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo+GitHub搭建个人博客</title>
       <link href="/2019/08/01/Hexo+Github/"/>
       <url>/2019/08/01/Hexo+Github/</url>
       
@@ -29,11 +104,11 @@
     
     
     <entry>
-      <title>a</title>
-      <link href="/2019/08/01/a/"/>
-      <url>/2019/08/01/a/</url>
+      <title>c3p0简单配置</title>
+      <link href="/2019/08/01/c3p0%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/"/>
+      <url>/2019/08/01/c3p0%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>#Oracle在c3p0的配置<br>使用c3p0链接Oracle也挺容易在拿到Oracle的账号密码与实例名还有默认的主机地址，配置起来和db.properties一样简单,但要注意c3p0-config命名并作为开始标签其次default-config再有要配置几项就有几个property<br>db.properties一般用于MyBatis的数据源的外部配置文件，导入时很简单只需要(如下)即可<br><code>&lt;properties resource=&quot;db.properties&quot;/&gt;</code>Mapper<br>而c3p0的导入无需操作，在导入c3p0包时就已经导入，无需再导入<br><code>&lt;context:property-placeholder location=&quot;classpath:db.properties&quot;/&gt;</code>Spring</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">driver = oracle.jdbc.driver.OracleDriver</span><br><span class="line">url = jdbc:oracle:thin:@localhost:1521:orcl</span><br><span class="line">username=c##scott</span><br><span class="line">password=tiger</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;c3p0-config&gt;</span><br><span class="line">&lt;default-config&gt;</span><br><span class="line">    &lt;property name=&quot;driverClass&quot;&gt;oracle.jdbc.driver.OracleDriver&lt;/property&gt;</span><br><span class="line">&lt;property name=&quot;jdbcUrl&quot;&gt;jdbc:oracle:thin://localhost:1521/&lt;/property&gt;</span><br><span class="line">&lt;property name=&quot;user&quot;&gt;C##SCOTT&lt;/property&gt;</span><br><span class="line">&lt;property name=&quot;password&quot;&gt;tiger&lt;/property&gt;</span><br><span class="line">&lt;/default-config&gt;</span><br><span class="line">&lt;/c3p0-config&gt;</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -45,7 +120,7 @@
       
         <tags>
             
-            <tag> -a </tag>
+            <tag> -c3p0 </tag>
             
         </tags>
       
@@ -55,8 +130,8 @@
     
     <entry>
       <title>Hello World</title>
-      <link href="/2019/07/31/hello-world/"/>
-      <url>/2019/07/31/hello-world/</url>
+      <link href="/2019/08/01/hello/"/>
+      <url>/2019/08/01/hello/</url>
       
         <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
       
