@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>HTML有点东西</title>
+      <link href="/2019/08/09/HTML%E6%9C%89%E7%82%B9%E4%B8%9C%E8%A5%BF/"/>
+      <url>/2019/08/09/HTML%E6%9C%89%E7%82%B9%E4%B8%9C%E8%A5%BF/</url>
+      
+        <content type="html"><![CDATA[<p>#video+source</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>#iframe</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>整合springMybatis</title>
       <link href="/2019/08/09/springmybatis1/"/>
       <url>/2019/08/09/springmybatis1/</url>
@@ -33,7 +58,7 @@
       <link href="/2019/08/07/%E6%B5%8B%E8%AF%95/"/>
       <url>/2019/08/07/%E6%B5%8B%E8%AF%95/</url>
       
-        <content type="html"><![CDATA[<iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="300px" height="200px" src="https://www.baidu.com/">                    </iframe><iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="1500px" height="2000px" src="https://www.bilibili.com/video/av53567787/?redirectFrom=h5">                    </iframe>]]></content>
+        <content type="html"><![CDATA[<iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="2000px" height="200px" src="https://www.baidu.com/">                    </iframe><iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="1200px" height="2000px" src="https://www.bilibili.com/video/av53567787/?redirectFrom=h5">                    </iframe>]]></content>
       
       
       <categories>
