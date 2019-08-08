@@ -168,7 +168,7 @@
     
         
             
-            <li><div data-rel="文集">文集<small>(5)</small></div>
+            <li><div data-rel="工具">工具<small>(1)</small></div>
                 
             </li>
             
@@ -176,7 +176,7 @@
     
         
             
-            <li><div data-rel="工具">工具<small>(1)</small></div>
+            <li><div data-rel="文集">文集<small>(5)</small></div>
                 
             </li>
             
@@ -229,15 +229,15 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">AspectJ补充</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color3">-Hexo+GitHub</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color2">hello-world</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">AspectJ补充</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -258,14 +258,6 @@
     
     <nav id="title-list-nav">
         
-        <a  class="文集 "
-           href="/2019/08/07/AspectJ补充/"
-           data-tag="AspectJ补充"
-           data-author="" >
-            <span class="post-title" title="AspectJ补充">AspectJ补充</span>
-            <span class="post-date" title="2019-08-07 22:10:59">2019/08/07</span>
-        </a>
-        
         <a  class="工具 "
            href="/2019/08/01/Hexo+Github/"
            data-tag="-Hexo+GitHub"
@@ -283,11 +275,11 @@
         </a>
         
         <a  class="文集 "
-           href="/2019/08/01/hello/"
-           data-tag="hello-world"
+           href="/2019/08/07/AspectJ补充/"
+           data-tag="AspectJ补充"
            data-author="" >
-            <span class="post-title" title="Hello World">Hello World</span>
-            <span class="post-date" title="2019-08-01 02:03:38">2019/08/01</span>
+            <span class="post-title" title="AspectJ补充">AspectJ补充</span>
+            <span class="post-date" title="2019-08-07 22:10:59">2019/08/07</span>
         </a>
         
         <a  class="文集 "
@@ -296,6 +288,14 @@
            data-author="" >
             <span class="post-title" title="c3p0简单配置">c3p0简单配置</span>
             <span class="post-date" title="2019-08-01 02:32:04">2019/08/01</span>
+        </a>
+        
+        <a  class="文集 "
+           href="/2019/08/01/hello/"
+           data-tag="hello-world"
+           data-author="" >
+            <span class="post-title" title="Hello World">Hello World</span>
+            <span class="post-date" title="2019-08-01 02:03:38">2019/08/01</span>
         </a>
         
         <a  class="文集 "
@@ -495,7 +495,7 @@ public void beforeDao（）{sout（“我是前置通知”）}
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#AspectJ补充','#-Hexo+GitHub','#hello-world','#-c3p0','#标签',],
+            'data': ['#-Hexo+GitHub','#hello-world','#AspectJ补充','#-c3p0','#标签',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
